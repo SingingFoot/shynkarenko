@@ -20,15 +20,12 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // Update this to your actual domain if you set up a custom one
+  url: 'https://shynkarenko.netlify.app',
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'SingingFoot',
+  projectName: 'shynkarenko',
 
   onBrokenLinks: 'warn',
 
@@ -77,8 +74,38 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // Open Graph / Twitter social card
+      image: 'img/portrait.jpg',
+
+      // Global meta tags injected into every page <head>
+      metadata: [
+        {
+          name: 'keywords',
+          content: [
+            'Олег Шинкаренко',
+            'Олег Вікторович Шинкаренко',
+            'Oleh Shynkarenko',
+            'Oleg Shynkarenko',
+            'Ukraine',
+            'Україна',
+            'українська література',
+            'Ukrainian literature',
+            'Ukrainian science fiction',
+            'Ukrainian novelist',
+            'Zaporizhzhia',
+            'Запоріжжя',
+            'технічний письменник',
+            'technical writer',
+            'documentary filmmaker',
+          ].join(', '),
+        },
+        { name: 'author', content: 'Oleh Shynkarenko' },
+        { name: 'robots', content: 'index, follow' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:locale', content: 'en_US' },
+        { property: 'og:site_name', content: 'Oleh Shynkarenko' },
+      ],
+
       colorMode: {
         respectPrefersColorScheme: true,
       },

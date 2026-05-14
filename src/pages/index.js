@@ -3,8 +3,23 @@ import React, { useState, useEffect } from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './index.module.css';
+
+const PERSON_SCHEMA = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Oleh Shynkarenko',
+  alternateName: ['Олег Шинкаренко', 'Олег Вікторович Шинкаренко', 'Oleg Shynkarenko'],
+  birthPlace: { '@type': 'Place', name: 'Zaporizhzhia, Ukraine' },
+  nationality: { '@type': 'Country', name: 'Ukraine' },
+  jobTitle: ['Novelist', 'Technical Writer', 'Journalist', 'Documentary Filmmaker'],
+  url: 'https://shynkarenko.netlify.app',
+  sameAs: ['https://github.com/SingingFoot/shynkarenko'],
+  knowsAbout: ['Ukrainian literature', 'Science fiction', 'Philosophy of technology', 'Metamodernism'],
+  memberOf: { '@type': 'Organization', name: 'National Union of Writers of Ukraine' },
+});
 
 // Outer ring (minutes): 234px container, radius 116px from centre (117,117)
 // Inner ring (hours):   220px portrait border, radius 110px from same centre
@@ -45,7 +60,12 @@ export default function Home() {
   return (
     <Layout
       title={siteConfig.title}
-      description="Personal website of Oleh Shynkarenko">
+      description="Oleh Shynkarenko (Олег Шинкаренко, Oleg Shynkarenko) — Ukrainian novelist, journalist, documentary filmmaker, and researcher from Zaporizhzhia, Ukraine. Member of the National Union of Writers of Ukraine.">
+      <Head>
+        <script type="application/ld+json">{PERSON_SCHEMA}</script>
+        <meta property="og:title" content="Oleh Shynkarenko — Ukrainian Writer" />
+        <meta name="keywords" content="Олег Шинкаренко, Oleh Shynkarenko, Oleg Shynkarenko, Ukraine, Україна, українська література, Ukrainian literature, Ukrainian novelist, Zaporizhzhia" />
+      </Head>
       <main className={styles.main}>
         <div className={styles.hero}>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './books.module.css'; // same card design as books
@@ -45,7 +46,13 @@ const ARTICLES = [
 
 export default function Articles() {
   return (
-    <Layout title="Articles" description="Articles by Oleh Shynkarenko">
+    <Layout
+      title="Articles by Oleh Shynkarenko"
+      description="Essays and articles by Oleh Shynkarenko (Олег Шинкаренко) — on metamodernism, Ukrainian cinema and history, philosophy of time, science fiction, and cultural memory. Ukrainian literary criticism and cultural studies.">
+      <Head>
+        <meta name="keywords" content="Oleh Shynkarenko articles, Олег Шинкаренко статті, metamodernism, Ukrainian cinema, Ukrainian science fiction, philosophy, cultural history, Ukraine, Україна, українська культура, Ukrainian literature" />
+        <meta property="og:title" content="Articles by Oleh Shynkarenko — Ukrainian Writer and Critic" />
+      </Head>
       <main className={styles.page}>
         <div className={styles.container}>
           <h1 className={styles.title}>Articles</h1>

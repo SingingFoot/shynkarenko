@@ -1,11 +1,18 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import styles from './page.module.css';
 import videoStyles from './videos.module.css';
 
 export default function Videos() {
   return (
-    <Layout title="Videos" description="Videos by Oleh Shynkarenko">
+    <Layout
+      title="Documentary Films by Oleh Shynkarenko"
+      description="Documentary films by Oleh Shynkarenko (Олег Шинкаренко) — Ukrainian documentary filmmaker. Films about theatre, memory, and everyday life in Ukraine: I Was Afraid to Climb the Stairs (2018), Leonora and Tschaika (2018), Stamp Collectors (2019).">
+      <Head>
+        <meta name="keywords" content="Oleh Shynkarenko films, Олег Шинкаренко документальне кіно, Ukrainian documentary, Ukraine, Україна, Zaporizhzhia, Ukrainian cinema, Leonora, Stamp Collectors" />
+        <meta property="og:title" content="Documentary Films by Oleh Shynkarenko" />
+      </Head>
       <main className={styles.page}>
         <div className={styles.container}>
           <h1 className={styles.title}>Videos</h1>

@@ -79,7 +79,13 @@ export default function Photos() {
   const next  = useCallback(() => setLightboxIndex(i => Math.min(PHOTOS.length - 1, i + 1)), []);
 
   return (
-    <Layout title="Photos" description="Photos by Oleh Shynkarenko">
+    <Layout
+      title="Photos by Oleh Shynkarenko"
+      description="Photography by Oleh Shynkarenko (Олег Шинкаренко) — documentary and street photography from Ukraine and Hungary. Portraits, landscapes, and everyday life.">
+      <Head>
+        <meta name="keywords" content="Oleh Shynkarenko photos, Олег Шинкаренко фото, Ukrainian photography, Ukraine, Україна, documentary photography, street photography" />
+        <meta property="og:title" content="Photos by Oleh Shynkarenko" />
+      </Head>
       <main className={styles.page}>
         <div className={styles.container}>
           <h1 className={styles.title}>Photos</h1>

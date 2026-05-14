@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from '../pages/articles/article.module.css';
@@ -17,9 +18,16 @@ import styles from '../pages/articles/article.module.css';
  */
 export default function ArticleLayout({ title, subtitle, image, prev, next, children }) {
   const imgSrc = useBaseUrl(image);
+  const description = subtitle || `${title} — an essay by Oleh Shynkarenko (Олег Шинкаренко), Ukrainian writer and researcher.`;
 
   return (
-    <Layout title={title} description={subtitle || `${title} — Oleh Shynkarenko`}>
+    <Layout title={title} description={description}>
+      <Head>
+        <meta property="og:title" content={`${title} — Oleh Shynkarenko`} />
+        <meta property="og:description" content={description} />
+        <meta property="article:author" content="Oleh Shynkarenko" />
+        <meta name="keywords" content={`${title}, Oleh Shynkarenko, Олег Шинкаренко, Ukrainian literature, українська літературна критика, Ukraine`} />
+      </Head>
       <main className={styles.page}>
         <div className={styles.container}>
 

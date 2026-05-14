@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Auto-generated sitemap by @docusaurus/plugin-sitemap (included in classic preset)
+Sitemap: https://shynkarenko.netlify.app/sitemap.xml

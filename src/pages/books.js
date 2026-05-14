@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './books.module.css';
@@ -39,7 +40,13 @@ const BOOKS = [
 
 export default function Books() {
   return (
-    <Layout title="Books" description="Books by Oleh Shynkarenko">
+    <Layout
+      title="Books by Oleh Shynkarenko"
+      description="Books by Oleh Shynkarenko (Олег Шинкаренко) — Ukrainian novelist. Novels include Kaharlyk (satirical dystopia, translated to English), The First Ukrainian Robots, Cherep, Bandera Distortion, and How to Disappear Completely. Ukrainian literature, science fiction, satire.">
+      <Head>
+        <meta name="keywords" content="Kaharlyk, The First Ukrainian Robots, Cherep, Bandera Distortion, Oleh Shynkarenko books, Олег Шинкаренко книги, Ukrainian novels, українська проза, Ukrainian science fiction, Ukrainian satire, Ukraine, Україна" />
+        <meta property="og:title" content="Books by Oleh Shynkarenko — Ukrainian Novelist" />
+      </Head>
       <main className={styles.page}>
         <div className={styles.container}>
           <h1 className={styles.title}>Books</h1>

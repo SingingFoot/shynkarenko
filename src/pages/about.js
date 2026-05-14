@@ -1,13 +1,53 @@
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import styles from './page.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+
+const PERSON_SCHEMA = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Oleh Shynkarenko',
+  alternateName: ['Олег Шинкаренко', 'Олег Вікторович Шинкаренко', 'Oleg Shynkarenko'],
+  birthDate: '1976-02-20',
+  birthPlace: { '@type': 'Place', name: 'Zaporizhzhia, Ukraine' },
+  nationality: { '@type': 'Country', name: 'Ukraine' },
+  homeLocation: { '@type': 'Place', name: 'Budapest, Hungary' },
+  email: 'singingfoot@gmail.com',
+  jobTitle: ['Novelist', 'Senior Technical Writer', 'Journalist', 'PhD Candidate'],
+  worksFor: { '@type': 'Organization', name: 'University of Pécs' },
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'Zaporizhzhya State Engineering Academy' },
+    { '@type': 'CollegeOrUniversity', name: 'International Academy of Journalism, Hamburg' },
+    { '@type': 'CollegeOrUniversity', name: 'Classic Private University, Ukraine' },
+  ],
+  memberOf: { '@type': 'Organization', name: 'National Union of Writers of Ukraine' },
+  knowsAbout: [
+    'Ukrainian literature', 'Science fiction', 'Philosophy of technology',
+    'Metamodernism', 'Ukrainian history', 'Technical writing', 'Journalism',
+  ],
+  knowsLanguage: ['Ukrainian', 'English', 'French', 'German', 'Hungarian'],
+  url: 'https://shynkarenko.netlify.app/about',
+  sameAs: ['https://github.com/SingingFoot/shynkarenko'],
+  hasOccupation: {
+    '@type': 'Occupation',
+    name: 'Novelist and Researcher',
+    description: 'Ukrainian novelist, journalist, documentary filmmaker, and PhD researcher in Ukrainian science fiction studies.',
+  },
+});
 
 export default function About() {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
-    <Layout title="About me" description="About Oleh Shynkarenko">
+    <Layout
+      title="About Oleh Shynkarenko"
+      description="Oleh Shynkarenko (Олег Шинкаренко, Oleg Shynkarenko) — Ukrainian novelist, journalist, documentary filmmaker, and PhD candidate at the University of Pécs. Born in Zaporizhzhia, Ukraine. Member of the National Union of Writers of Ukraine. Author of Kaharlyk, The First Ukrainian Robots, and other novels.">
+      <Head>
+        <script type="application/ld+json">{PERSON_SCHEMA}</script>
+        <meta name="keywords" content="Олег Шинкаренко, Олег Вікторович Шинкаренко, Oleh Shynkarenko, Oleg Shynkarenko, Ukrainian writer, українська письменник, Ukraine, Україна, Zaporizhzhia, Запоріжжя, National Union of Writers of Ukraine, University of Pécs, Ukrainian science fiction" />
+        <meta property="og:title" content="About Oleh Shynkarenko — Ukrainian Novelist and Researcher" />
+      </Head>
       <main className={styles.page}>
         <div className={styles.container}>
           <h1 className={styles.title}>Oleh Shynkarenko - Full Professional Profile</h1>
