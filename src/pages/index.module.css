@@ -23,7 +23,18 @@
   filter: drop-shadow(0 2px 6px rgba(200,80,0,0.25));
 }
 
-/* Orange circle frame — 1px solid orange border */
+/* Outer container — holds both rings and the shared SVG overlay */
+.ringContainer {
+  position: relative;
+  width: 234px;
+  height: 234px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Inner orange ring — portrait border (hour hand ring) */
 .portraitWrapper {
   width: 220px;
   height: 220px;
@@ -34,6 +45,16 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+/* SVG overlay — covers the full 234px container; draws outer ring + both dots */
+.clockOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 234px;
+  height: 234px;
+  pointer-events: none;
 }
 
 .portrait {
@@ -149,9 +170,17 @@
 }
 
 @media (max-width: 600px) {
+  .ringContainer {
+    width: 190px;
+    height: 190px;
+  }
   .portraitWrapper {
     width: 160px;
     height: 160px;
+  }
+  .clockOverlay {
+    width: 190px;
+    height: 190px;
   }
   .name {
     font-size: 1.8rem;
