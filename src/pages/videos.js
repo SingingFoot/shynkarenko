@@ -84,6 +84,38 @@ export default function Videos() {
               </p>
             </div>
 
+            <div className={videoStyles.videoCard}>
+              <div className={videoStyles.embedWrapper}>
+                <iframe
+                  src="https://www.youtube.com/embed/ZmUutHcf5Ok"
+                  title="Stamp Collectors"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+
+              <div className={videoStyles.videoMeta}>
+                <h2 className={videoStyles.videoTitle}>Stamp Collectors</h2>
+                <span className={videoStyles.videoSubtitle}>Documentary · 2019</span>
+              </div>
+
+              <p className={videoStyles.videoNote}>
+                All the boys loved collecting stamps. The years passed, and the boys grew old,
+                and the stamps filled every corner of their lives without remainder. It was
+                fascinating — endlessly, genuinely fascinating — and then it was over, and they
+                found themselves alone among thousands of small pictures of lives that had long
+                since vanished and would never come back.
+              </p>
+              <p className={videoStyles.videoNote}>
+                There is something quietly devastating about guarding a museum no one will ever
+                visit. And yet — it was joyful once. So why couldn't it be joyful now? The film
+                sits with that question rather than resolving it, finding in the collectors'
+                stubborn, tender devotion something that looks less like defeat than like a
+                form of faithfulness.
+              </p>
+            </div>
+
           </div>
         </div>
       </main>
