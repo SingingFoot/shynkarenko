@@ -26,20 +26,21 @@ function getAngles() {
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   const [showExplanation, setShowExplanation] = useState(false);
-  const [angles, setAngles] = useState(getAngles);
+  // null on server — populated client-side only so we always use the visitor's local timezone
+  const [angles, setAngles] = useState(null);
 
-  // Refresh every 10 s — smooth enough for the minute dot
+  // Set immediately on mount (client), then refresh every 10 s
   useEffect(() => {
+    setAngles(getAngles());
     const timer = setInterval(() => setAngles(getAngles()), 10_000);
     return () => clearInterval(timer);
   }, []);
 
-  // Hour dot position (on inner ring, r = 110 from centre 128)
-  const hx = C + R_IN  * Math.cos(angles.hour);
-  const hy = C + R_IN  * Math.sin(angles.hour);
-  // Minute dot position (on outer ring, r = 127 from centre 128)
-  const mx = C + R_OUT * Math.cos(angles.minute);
-  const my = C + R_OUT * Math.sin(angles.minute);
+  // Dot positions — computed only when angles are available
+  const hx = angles ? C + R_IN  * Math.cos(angles.hour)   : C;
+  const hy = angles ? C + R_IN  * Math.sin(angles.hour)   : C;
+  const mx = angles ? C + R_OUT * Math.cos(angles.minute) : C;
+  const my = angles ? C + R_OUT * Math.sin(angles.minute) : C;
 
   return (
     <Layout
@@ -76,10 +77,15 @@ export default function Home() {
                 stroke="#ff8c00"
                 strokeWidth="1"
               />
-              {/* Hour dot — 5 px, on inner ring */}
-              <circle cx={hx} cy={hy} r={5} fill="#ff8c00" />
-              {/* Minute dot — 3 px, on outer ring */}
-              <circle cx={mx} cy={my} r={3} fill="#ff8c00" />
+              {/* Dots rendered only after client mount so time is always visitor-local */}
+              {angles && (
+                <>
+                  {/* Hour dot — 5 px, on inner ring */}
+                  <circle cx={hx} cy={hy} r={5} fill="#ff8c00" />
+                  {/* Minute dot — 3 px, on outer ring */}
+                  <circle cx={mx} cy={my} r={3} fill="#ff8c00" />
+                </>
+              )}
             </svg>
           </div>
 
