@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="shell">
+      <path d="M 4.09,59.59 Q 4.0,50.88 12.28,48.21 Q 14.52,39.8 23.22,39.43 Q 27.63,31.92 36.1,33.89 Q 42.36,27.84 50.0,32.0 Q 57.64,27.84 63.9,33.89 Q 72.37,31.92 76.78,39.43 Q 85.48,39.8 87.72,48.21 Q 96.0,50.88 95.91,59.59 L 61.88,82.33 Q 53,92 50,93 Q 47,92 38.12,82.33 Z"/>
+    </clipPath>
+    <radialGradient id="tint" cx="50%" cy="95%" r="80%" fx="50%" fy="100%">
+      <stop offset="0%"   stop-color="#f8e0b0" stop-opacity="0.40"/>
+      <stop offset="60%"  stop-color="#000000" stop-opacity="0.00"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.45"/>
+    </radialGradient>
+  </defs>
+
+  <!-- base fill clipped to shell shape -->
+  <g clip-path="url(#shell)">
+    <!-- warm mid-tone base -->
+    <rect x="0" y="0" width="100" height="100" fill="#b05828"/>
+
+    <!-- light ridge sectors -->
+    <path d="M 50,84 L 1.72,64.69 A 52,52 0 0 1 6.99,54.77 Z" fill="#e8b070"/>
+    <path d="M 50,84 L 8.64,52.49 A 52,52 0 0 1 16.37,44.34 Z" fill="#e8b070"/>
+    <path d="M 50,84 L 18.56,42.58 A 52,52 0 0 1 28.19,36.8 Z" fill="#e8b070"/>
+    <path d="M 50,84 L 30.77,35.69 A 52,52 0 0 1 41.6,32.68 Z" fill="#e8b070"/>
+    <path d="M 50,84 L 44.38,32.3 A 52,52 0 0 1 55.62,32.3 Z" fill="#e8b070"/>
+    <path d="M 50,84 L 58.4,32.68 A 52,52 0 0 1 69.23,35.69 Z" fill="#e8b070"/>
+    <path d="M 50,84 L 71.81,36.8 A 52,52 0 0 1 81.44,42.58 Z" fill="#e8b070"/>
+    <path d="M 50,84 L 83.63,44.34 A 52,52 0 0 1 91.36,52.49 Z" fill="#e8b070"/>
+    <path d="M 50,84 L 93.01,54.77 A 52,52 0 0 1 98.28,64.69 Z" fill="#e8b070"/>
+
+    <!-- dark valley sectors -->
+    <path d="M 50,84 L 6.99,54.77 A 52,52 0 0 1 8.64,52.49 Z" fill="#3a0e00"/>
+    <path d="M 50,84 L 16.37,44.34 A 52,52 0 0 1 18.56,42.58 Z" fill="#3a0e00"/>
+    <path d="M 50,84 L 28.19,36.8 A 52,52 0 0 1 30.77,35.69 Z" fill="#3a0e00"/>
+    <path d="M 50,84 L 41.6,32.68 A 52,52 0 0 1 44.38,32.3 Z" fill="#3a0e00"/>
+    <path d="M 50,84 L 55.62,32.3 A 52,52 0 0 1 58.4,32.68 Z" fill="#3a0e00"/>
+    <path d="M 50,84 L 69.23,35.69 A 52,52 0 0 1 71.81,36.8 Z" fill="#3a0e00"/>
+    <path d="M 50,84 L 81.44,42.58 A 52,52 0 0 1 83.63,44.34 Z" fill="#3a0e00"/>
+    <path d="M 50,84 L 91.36,52.49 A 52,52 0 0 1 93.01,54.77 Z" fill="#3a0e00"/>
+
+    <!-- bright centre highlight per ridge -->
+    <line x1="50" y1="84" x2="4.09" y2="59.59" stroke="#f8e0b8" stroke-width="1.6" stroke-linecap="butt" opacity="0.90"/>
+    <line x1="50" y1="84" x2="12.28" y2="48.21" stroke="#f8e0b8" stroke-width="1.6" stroke-linecap="butt" opacity="0.90"/>
+    <line x1="50" y1="84" x2="23.22" y2="39.43" stroke="#f8e0b8" stroke-width="1.6" stroke-linecap="butt" opacity="0.90"/>
+    <line x1="50" y1="84" x2="36.1" y2="33.89" stroke="#f8e0b8" stroke-width="1.6" stroke-linecap="butt" opacity="0.90"/>
+    <line x1="50" y1="84" x2="50.0" y2="32.0" stroke="#f8e0b8" stroke-width="1.6" stroke-linecap="butt" opacity="0.90"/>
+    <line x1="50" y1="84" x2="63.9" y2="33.89" stroke="#f8e0b8" stroke-width="1.6" stroke-linecap="butt" opacity="0.90"/>
+    <line x1="50" y1="84" x2="76.78" y2="39.43" stroke="#f8e0b8" stroke-width="1.6" stroke-linecap="butt" opacity="0.90"/>
+    <line x1="50" y1="84" x2="87.72" y2="48.21" stroke="#f8e0b8" stroke-width="1.6" stroke-linecap="butt" opacity="0.90"/>
+    <line x1="50" y1="84" x2="95.91" y2="59.59" stroke="#f8e0b8" stroke-width="1.6" stroke-linecap="butt" opacity="0.90"/>
+
+    <!-- radial tint: bright at hinge, dark at edges for depth -->
+    <rect x="0" y="0" width="100" height="100" fill="url(#tint)"/>
+  </g>
+
+  <!-- outline on top -->
+  <path d="M 4.09,59.59 Q 4.0,50.88 12.28,48.21 Q 14.52,39.8 23.22,39.43 Q 27.63,31.92 36.1,33.89 Q 42.36,27.84 50.0,32.0 Q 57.64,27.84 63.9,33.89 Q 72.37,31.92 76.78,39.43 Q 85.48,39.8 87.72,48.21 Q 96.0,50.88 95.91,59.59 L 61.88,82.33 Q 53,92 50,93 Q 47,92 38.12,82.33 Z" fill="none" stroke="#2a0800" stroke-width="1.2" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,68 @@
+.videoCard {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 2rem;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.videoCard:hover {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.11);
+}
+
+/* 16:9 responsive embed */
+.embedWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+}
+
+.embedWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.videoMeta {
+  padding: 1.25rem 1.75rem 0.5rem;
+}
+
+.videoTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  color: var(--ifm-heading-color);
+  border: none;
+  padding: 0;
+}
+
+.videoSubtitle {
+  font-size: 0.88rem;
+  color: var(--ifm-color-emphasis-600);
+  letter-spacing: 0.03em;
+}
+
+.videoNote {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+  padding: 0.85rem 1.75rem;
+}
+
+.videoNote + .videoNote {
+  padding-top: 0;
+  padding-bottom: 1.5rem;
+}
+
+.videoNote:first-of-type {
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-100);
+  margin-top: 0.75rem;
+}

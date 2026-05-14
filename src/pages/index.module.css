@@ -1,0 +1,159 @@
+.main {
+  min-height: calc(100vh - var(--ifm-navbar-height) - var(--ifm-footer-height, 80px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ifm-background-color);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+/* Shell logo above portrait */
+.shellLogo {
+  width: 72px;
+  height: 72px;
+  margin-bottom: -0.5rem;
+  filter: drop-shadow(0 2px 6px rgba(200,80,0,0.25));
+}
+
+/* Orange circle frame — 1px solid orange border */
+.portraitWrapper {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 1px solid #ff8c00;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.portrait {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--ifm-heading-color);
+  letter-spacing: -0.5px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--ifm-color-secondary-darkest);
+  margin: 0;
+  max-width: 480px;
+}
+
+.navLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.navLink {
+  padding: 0.5rem 1.4rem;
+  border: 1px solid #ff8c00;
+  border-radius: 24px;
+  color: #ff8c00;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.navLink:hover {
+  background: #ff8c00;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Meme of the Day module */
+.memeModule {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  max-width: 600px;
+  width: 100%;
+}
+
+.memeTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-heading-color);
+}
+
+.memeImage {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+}
+
+.explainButton {
+  background: none;
+  border: 1px solid #ff8c00;
+  color: #ff8c00;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.explainButton:hover {
+  background: #fff8f0;
+}
+
+.explanation {
+  margin-top: 1.5rem;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 4px;
+}
+
+.explanationText {
+  border-left: 4px solid #ff8c00;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.explanationText a {
+  color: #ff8c00;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.explanationText a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .portraitWrapper {
+    width: 160px;
+    height: 160px;
+  }
+  .name {
+    font-size: 1.8rem;
+  }
+}
