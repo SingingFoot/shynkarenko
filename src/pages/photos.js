@@ -17,6 +17,9 @@ const PHOTOS = [
   { file: 'rysya.jpg',       alt: 'Rysya' },
   { file: 'koza.png',        alt: 'Goat' },
   { file: 'Head.png',        alt: 'Head' },
+  { file: '1980.png',        alt: '1980' },
+  { file: '1985.jpg',        alt: '1985' },
+  { file: '1996.png',        alt: '1996' },
 ];
 
 function Lightbox({ photos, index, onClose, onPrev, onNext }) {
