@@ -8,9 +8,9 @@ export default function Music() {
   return (
     <Layout
       title="Music by Oleh Shynkarenko"
-      description="Music composed and performed by Oleh Shynkarenko (Олег Шинкаренко) — Ukrainian singer-songwriter. Songs in Ukrainian in post-punk and new wave style, recorded in Zaporizhzhia, Ukraine. Tracks: Last Tram (Останній Трамвай, 2006), Princess (Принцеса, 2002).">
+      description="Music composed and performed by Oleh Shynkarenko (Олег Шинкаренко) — Ukrainian singer-songwriter. Songs in Ukrainian in post-punk and new wave style, recorded in Zaporizhzhia, Ukraine. Tracks: Rose (Роза, 1999), Last Tram (Останній Трамвай, 2006), Princess (Принцеса, 2002).">
       <Head>
-        <meta name="keywords" content="Oleh Shynkarenko music, Олег Шинкаренко музика, Ukrainian music, українська музика, Ukraine, Україна, Zaporizhzhia, post-punk, new wave, Останній Трамвай, Last Tram, Принцеса, Princess" />
+        <meta name="keywords" content="Oleh Shynkarenko music, Олег Шинкаренко музика, Ukrainian music, українська музика, Ukraine, Україна, Zaporizhzhia, post-punk, new wave, Роза, Rose, Останній Трамвай, Last Tram, Принцеса, Princess" />
         <meta property="og:title" content="Music by Oleh Shynkarenko — Ukrainian Musician" />
       </Head>
       <main className={styles.page}>
@@ -18,6 +18,27 @@ export default function Music() {
           <h1 className={styles.title}>Music</h1>
           <div className={styles.content}>
             <p>Music composed and performed by Oleh Shynkarenko.</p>
+
+            <div className={musicStyles.trackCard}>
+              <div className={musicStyles.trackHeader}>
+                <div className={musicStyles.trackMeta}>
+                  <h2 className={musicStyles.trackTitle}>Rose</h2>
+                  <span className={musicStyles.trackSubtitle}>Роза · 1999</span>
+                </div>
+              </div>
+
+              <audio
+                className={musicStyles.player}
+                controls
+                src="/music/roza.wav"
+              >
+                Your browser does not support the audio element.
+              </audio>
+
+              <p className={musicStyles.trackNote}>
+                This is my very first song <em>Rose</em> (<em>Роза</em>), written and recorded back in 1999. It is based on a poem by Federico García Lorca, which I slightly adapted to fit the rhythm of the music. Back then, I didn't own a computer and had absolutely no clue about digital audio recording. The track was engineered by a 16-year-old guy named Volodymyr, who managed to have an entire recording studio set up at his home. The vocals were performed as a duet by myself and Anna Chyzhova. Sound-wise, I was trying to capture the 1980s New Wave vibe that I was deeply fascinated by at the time. Chords drenched in chorus effect always give the impression of some otherworldly instrument—like a tamed Trumpet of Jericho.
+              </p>
+            </div>
 
             <div className={musicStyles.trackCard}>
               <div className={musicStyles.trackHeader}>
