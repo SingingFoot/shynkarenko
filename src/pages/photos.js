@@ -20,6 +20,7 @@ const PHOTOS = [
   { file: '1980.png',        alt: '1980' },
   { file: '1985.jpg',        alt: '1985' },
   { file: '1996.png',        alt: '1996' },
+  { file: '1996_roof.jpg',   alt: '1996 roof' },
 ];
 
 function Lightbox({ photos, index, onClose, onPrev, onNext }) {

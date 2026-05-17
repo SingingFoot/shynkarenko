@@ -8,9 +8,9 @@ export default function Music() {
   return (
     <Layout
       title="Music by Oleh Shynkarenko"
-      description="Music composed and performed by Oleh Shynkarenko (Олег Шинкаренко) — Ukrainian singer-songwriter. Songs in Ukrainian in post-punk and new wave style, recorded in Zaporizhzhia, Ukraine. Tracks: Rose (Роза, 1999), I will not tell you (Я не скажу тебе, 2000), Last Tram (Останній Трамвай, 2006), Princess (Принцеса, 2002).">
+      description="Music composed and performed by Oleh Shynkarenko (Олег Шинкаренко) — Ukrainian singer-songwriter. Songs in Ukrainian in post-punk and new wave style, recorded in Zaporizhzhia, Ukraine. Tracks: Rose (Роза, 1999), I will not tell you (Я не скажу тебе, 2000), Lake (Озеро, 2004), Last Tram (Останній Трамвай, 2006), Princess (Принцеса, 2002).">
       <Head>
-        <meta name="keywords" content="Oleh Shynkarenko music, Олег Шинкаренко музика, Ukrainian music, українська музика, Ukraine, Україна, Zaporizhzhia, post-punk, new wave, Роза, Rose, Я не скажу тебе, I will not tell you, Останній Трамвай, Last Tram, Принцеса, Princess" />
+        <meta name="keywords" content="Oleh Shynkarenko music, Олег Шинкаренко музика, Ukrainian music, українська музика, Ukraine, Україна, Zaporizhzhia, post-punk, new wave, Роза, Rose, Я не скажу тебе, I will not tell you, Озеро, Lake, Останній Трамвай, Last Tram, Принцеса, Princess" />
         <meta property="og:title" content="Music by Oleh Shynkarenko — Ukrainian Musician" />
       </Head>
       <main className={styles.page}>
@@ -64,33 +64,6 @@ export default function Music() {
             <div className={musicStyles.trackCard}>
               <div className={musicStyles.trackHeader}>
                 <div className={musicStyles.trackMeta}>
-                  <h2 className={musicStyles.trackTitle}>Last Tram</h2>
-                  <span className={musicStyles.trackSubtitle}>Останній Трамвай · 2006</span>
-                </div>
-              </div>
-
-              <audio
-                className={musicStyles.player}
-                controls
-                src="/music/last-tram.wav"
-              >
-                Your browser does not support the audio element.
-              </audio>
-
-              <p className={musicStyles.trackNote}>
-                Recorded in 2006, <em>Last Tram</em> (<em>Останній Трамвай</em>) grew out of a love
-                story and turns on a Ukrainian play on words —{' '}
-                <em>пошити у дурні</em> (to make a fool of someone) against{' '}
-                <em>у дурні пошитися</em> (to make a fool of oneself) — holding both meanings in
-                tension at once. The song borrows the sonic vocabulary of 1980s post-punk and new
-                wave, wearing those genre markers as a kind of mask: the style's detached cool
-                becomes the very vehicle for the song's emotional argument.
-              </p>
-            </div>
-
-            <div className={musicStyles.trackCard}>
-              <div className={musicStyles.trackHeader}>
-                <div className={musicStyles.trackMeta}>
                   <h2 className={musicStyles.trackTitle}>Princess</h2>
                   <span className={musicStyles.trackSubtitle}>Принцеса · c. 2002</span>
                 </div>
@@ -115,6 +88,54 @@ export default function Music() {
                 style becomes something else: a deliberate simulation, a mask pulled over the
                 unglamorous textures of provincial life, making the gesture of cool both sincere
                 and quietly ironic at the same time.
+              </p>
+            </div>
+
+            <div className={musicStyles.trackCard}>
+              <div className={musicStyles.trackHeader}>
+                <div className={musicStyles.trackMeta}>
+                  <h2 className={musicStyles.trackTitle}>Lake</h2>
+                  <span className={musicStyles.trackSubtitle}>Озеро · c. 2004</span>
+                </div>
+              </div>
+
+              <audio
+                className={musicStyles.player}
+                controls
+                src="/music/ozero.mp3"
+              >
+                Your browser does not support the audio element.
+              </audio>
+
+              <p className={musicStyles.trackNote}>
+                I recorded this song somewhere between 2003 and 2005. By that time, I had become quite adept at manipulating samples—slicing, rearranging, and tweaking pitch, dynamics, and volume with ease. Around then, Tetiana Levina and I recorded a few tracks together; she even performed two of them at a local competition in Zaporizhzhia and won an award. I didn't bother attending the performance, which pretty much sums up my attitude toward my own work—I never took it seriously or expected it to yield any dividends. Nonetheless, this particular song turned out rather well. I put an immense amount of effort into the solo guitar part; I played the track first, and then meticulously chopped and rearranged it to make it sound both melodic and delightfully convoluted. The whole process was captivating, leaving me with the distinct impression that I was doing something deeply important, yet entirely pointless.
+              </p>
+            </div>
+
+            <div className={musicStyles.trackCard}>
+              <div className={musicStyles.trackHeader}>
+                <div className={musicStyles.trackMeta}>
+                  <h2 className={musicStyles.trackTitle}>Last Tram</h2>
+                  <span className={musicStyles.trackSubtitle}>Останній Трамвай · 2006</span>
+                </div>
+              </div>
+
+              <audio
+                className={musicStyles.player}
+                controls
+                src="/music/last-tram.wav"
+              >
+                Your browser does not support the audio element.
+              </audio>
+
+              <p className={musicStyles.trackNote}>
+                Recorded in 2006, <em>Last Tram</em> (<em>Останній Трамвай</em>) grew out of a love
+                story and turns on a Ukrainian play on words —{' '}
+                <em>пошити у дурні</em> (to make a fool of someone) against{' '}
+                <em>у дурні пошитися</em> (to make a fool of oneself) — holding both meanings in
+                tension at once. The song borrows the sonic vocabulary of 1980s post-punk and new
+                wave, wearing those genre markers as a kind of mask: the style's detached cool
+                becomes the very vehicle for the song's emotional argument.
               </p>
             </div>
           </div>
