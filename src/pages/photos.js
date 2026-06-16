@@ -23,6 +23,8 @@ const PHOTOS = [
   { file: '1996_roof.jpg',   alt: '1996 roof' },
   { file: 'shalandon.png',   alt: 'Sorj Chalandon and Iryna Slavinska' },
   { file: 'chernivtsi.png',  alt: 'Chernivtsi. 2014' },
+  { file: 'Bloomsday.png',   alt: 'Bloomsday in Smoloskyp publishing house' },
+  { file: 'onek.png',        alt: 'Ukrainian street-artist Rostyk Onek' },
 ];
 
 function Lightbox({ photos, index, onClose, onPrev, onNext }) {
