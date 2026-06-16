@@ -21,6 +21,8 @@ const PHOTOS = [
   { file: '1985.jpg',        alt: '1985' },
   { file: '1996.png',        alt: '1996' },
   { file: '1996_roof.jpg',   alt: '1996 roof' },
+  { file: 'shalandon.png',   alt: 'Sorj Chalandon and Iryna Slavinska' },
+  { file: 'chernivtsi.png',  alt: 'Chernivtsi. 2014' },
 ];
 
 function Lightbox({ photos, index, onClose, onPrev, onNext }) {
