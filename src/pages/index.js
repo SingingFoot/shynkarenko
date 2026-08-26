@@ -82,9 +82,12 @@ export default function Home() {
             </div>
 
             {/* SVG: outer ring stroke + minute dot (3px) + hour dot (5px) */}
+            {/* viewBox keeps the ring and dots proportional to the container at every
+                breakpoint — without it, the fixed width/height attributes below would
+                stay 234px even when .clockOverlay is shrunk by CSS on mobile, making
+                the ring bigger than the portrait and knocking the dots out of place. */}
             <svg
-              width={OUTER}
-              height={OUTER}
+              viewBox={`0 0 ${OUTER} ${OUTER}`}
               className={styles.clockOverlay}
               aria-hidden="true"
               style={{ overflow: 'visible' }}

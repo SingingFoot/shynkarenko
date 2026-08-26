@@ -1,7 +1,7 @@
 // Placeholder news items — replace title/date/excerpt/content with real updates.
 const NEWS = [
   {
-    slug: 'news-item-1',
+    slug: 'heroes',
     title: 'Last summer Kerti Filozófia meeting: Heroes',
     date: 'August 25, 2026',
     excerpt: "The last summer gathering of Kerti Filozófia — the philosophy discussions held at Kisdiófa Közösségi Kert — took on the concept of the hero, from Romantic-era myth-making to wartime monument politics.",
