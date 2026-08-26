@@ -6,6 +6,7 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './index.module.css';
+import NEWS from '@site/src/data/news';
 
 const PERSON_SCHEMA = JSON.stringify({
   '@context': 'https://schema.org',
@@ -118,6 +119,27 @@ export default function Home() {
             <Link className={styles.navLink} to="/photos">Photos</Link>
             <Link className={styles.navLink} to="/videos">Videos</Link>
             <Link className={styles.navLink} to="/music">Music</Link>
+            <Link className={styles.navLink} to="/news">News</Link>
+          </div>
+
+          {/* Latest News widget */}
+          <div className={styles.newsModule}>
+            <h2 className={styles.newsTitle}>Latest News</h2>
+            <ul className={styles.newsList}>
+              {NEWS.map((item) => (
+                <li key={item.slug} className={styles.newsListItem}>
+                  <a
+                    href={`/news#${item.slug}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.newsLink}
+                  >
+                    <span className={styles.newsLinkTitle}>{item.title}</span>
+                    <span className={styles.newsLinkArrow}>→</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Meme of the Day Module */}

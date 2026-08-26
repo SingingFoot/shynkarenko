@@ -124,6 +124,7 @@ const config = {
           {to: '/photos', label: 'Photos', position: 'left'},
           {to: '/videos', label: 'Videos', position: 'left'},
           {to: '/music', label: 'Music', position: 'left'},
+          {to: '/news', label: 'News', position: 'left'},
         ],
       },
       footer: {
@@ -143,6 +144,7 @@ const config = {
               {label: 'Photos', to: '/photos'},
               {label: 'Videos', to: '/videos'},
               {label: 'Music', to: '/music'},
+              {label: 'News', to: '/news'},
             ],
           },
         ],
