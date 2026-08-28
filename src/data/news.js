@@ -74,36 +74,6 @@ const NEWS = [
       "This work belongs to my wider research into totalitarianism in the USSR and the cultural forms it left behind — one of the themes of my doctoral dissertation at the University of Pécs.",
     ],
   },
-  {
-    slug: 'news-item-3',
-    title: 'News headline placeholder #3',
-    date: 'TBD',
-    excerpt: 'Short summary placeholder text describing this news item goes here. Replace with a real update.',
-    content: [
-      'This is placeholder body text for the third news item. Replace it with the full text of the announcement, update, or story.',
-      'Add as many paragraphs as needed here — this area supports the full, untruncated version of the news item.',
-    ],
-  },
-  {
-    slug: 'news-item-4',
-    title: 'News headline placeholder #4',
-    date: 'TBD',
-    excerpt: 'Short summary placeholder text describing this news item goes here. Replace with a real update.',
-    content: [
-      'This is placeholder body text for the fourth news item. Replace it with the full text of the announcement, update, or story.',
-      'Add as many paragraphs as needed here — this area supports the full, untruncated version of the news item.',
-    ],
-  },
-  {
-    slug: 'news-item-5',
-    title: 'News headline placeholder #5',
-    date: 'TBD',
-    excerpt: 'Short summary placeholder text describing this news item goes here. Replace with a real update.',
-    content: [
-      'This is placeholder body text for the fifth news item. Replace it with the full text of the announcement, update, or story.',
-      'Add as many paragraphs as needed here — this area supports the full, untruncated version of the news item.',
-    ],
-  },
 ];
 
 export default NEWS;
