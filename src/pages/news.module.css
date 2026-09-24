@@ -101,6 +101,17 @@
   margin-bottom: 0;
 }
 
+/* Section subheadings inside long-form items */
+.sectionHeading {
+  margin: 2rem 0 0.9rem 0;
+  padding-left: 0.7rem;
+  border-left: 3px solid #ff8c00;
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ifm-heading-color);
+}
+
 /* Stamp illustrations placed between paragraphs */
 .stamp {
   display: block;

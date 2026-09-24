@@ -9,21 +9,31 @@ import NEWS from '@site/src/data/news';
 //   'plain string'                                  → paragraph
 //   { text, image }                                 → paragraph followed by a stamp illustration
 //   { type: 'quote', text, attribution, url }       → pull quote
+//   { type: 'heading', text }                     → section subheading
 //   { type: 'image', src, alt, caption }            → figure with caption
 //   { type: 'links', items: [{ label, note, url }] }→ external link cards
+// Render *italic* spans inside a plain-text paragraph.
+function renderInline(text) {
+  return text.split(/(\*[^*]+\*)/g).map((part, i) =>
+    part.length > 2 && part.startsWith('*') && part.endsWith('*')
+      ? <em key={i}>{part.slice(1, -1)}</em>
+      : part
+  );
+}
+
 function ContentBlock({ block }) {
   const isString = typeof block === 'string';
   // Hooks must run unconditionally, so resolve any image path up front.
   const imageSrc = useBaseUrl(isString ? undefined : block.image || block.src);
 
   if (isString) {
-    return <p>{block}</p>;
+    return <p>{renderInline(block)}</p>;
   }
 
   if (block.type === 'quote') {
     return (
       <blockquote className={styles.pullQuote}>
-        <p className={styles.quoteText}>{block.text}</p>
+        <p className={styles.quoteText}>{renderInline(block.text)}</p>
         {block.attribution && (
           <cite className={styles.quoteAttribution}>
             {block.url ? (
@@ -37,6 +47,10 @@ function ContentBlock({ block }) {
         )}
       </blockquote>
     );
+  }
+
+  if (block.type === 'heading') {
+    return <h3 className={styles.sectionHeading}>{block.text}</h3>;
   }
 
   if (block.type === 'image') {
@@ -79,7 +93,7 @@ function ContentBlock({ block }) {
 
   return (
     <>
-      <p>{block.text}</p>
+      <p>{renderInline(block.text)}</p>
       {block.image && (
         <img src={imageSrc} alt="" className={styles.stamp} loading="lazy" />
       )}
