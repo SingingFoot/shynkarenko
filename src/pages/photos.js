@@ -5,6 +5,12 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './photos.module.css';
 
 const PHOTOS = [
+  { file: 'Girona.png',          alt: 'Girona' },
+  { file: 'rotterdam-bikes.jpg', alt: 'Rotterdam bikes' },
+  { file: 'Rotterdam.png',       alt: 'Rotterdam' },
+  { file: 'pest-girl.png',       alt: 'Pest girl' },
+  { file: 'RostykBW.png',        alt: 'Rostyk' },
+  { file: 'seagull.png',         alt: 'Seagull (black and white)' },
   { file: 'mist.jpg',        alt: 'Misty landscape' },
   { file: 'bridge.jpg',      alt: 'Bridge' },
   { file: 'bird.jpg',        alt: 'Bird' },
