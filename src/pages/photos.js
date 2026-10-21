@@ -5,6 +5,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './photos.module.css';
 
 const PHOTOS = [
+  { file: 'irvanets-2006-1.jpg',      alt: 'Poet Olexandr Irvanets in 2006' },
+  { file: 'irvanets-2006-2.jpg',      alt: 'Poet Olexandr Irvanets in 2006' },
+  { file: 'budapest-philosopher.jpg', alt: 'Budapest philosopher' },
   { file: 'Girona.png',          alt: 'Girona' },
   { file: 'rotterdam-bikes.jpg', alt: 'Rotterdam bikes' },
   { file: 'Rotterdam.png',       alt: 'Rotterdam' },
